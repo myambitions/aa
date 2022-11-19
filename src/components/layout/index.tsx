@@ -16,7 +16,7 @@ function App() {
     const data = await api.get(city);
 
     // we took 12:00 timestamp as average temp of the day as on free version we can get 3h-5days forecast data
-    const next = data.list.filter((_, idx) => idx % 8 === 0);
+    const next = data.list.filter((_: any, idx: number) => idx % 8 === 0);
 
     setWeatherInfo(next);
     setLoading(false);
